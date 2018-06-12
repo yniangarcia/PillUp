@@ -28,8 +28,8 @@
         android:layout_marginTop="0dp"
         android:gravity="center"
         android:hint="@string/nombre_de_la_pastilla"
-        android:back
         android:inputType="text"
+        android:background="@color/profile"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff" />
 
