@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#B344A392</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparente">#00000000</color>
+    <color name="principal">#1192B2</color>
+    <color name="black">#000000</color>
+    <color name="gris">#807F7F</color>
+    <color name="login">#363F50</color>
+    <color name="fondo">#B344A392</color>
+    <color name="profile">#7344A392</color>
+    <color name="profile2">#5944A392</color>
+
+    <color name="etiquetas">#E644A392</color>
+    <color name="data">#E1A18E</color>
+    <color name="gris1">#4f4f4f</color>
+    <color name="gris2">#6a6a6a</color>
+    <color name="gris3">#848484</color>
+    <color name="gris4">#9f9f9f</color>
+    <color name="gris5">#b9b9b9</color>
+    <color name="prova1">#E1A18E</color>
+    <color name="prova2">#ecc3b6</color>
+
+</resources>
+

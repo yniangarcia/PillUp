@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">PillUp</string>
+    <string name="todo">TODO</string>
+    <string name="nombre_y_apellidos">Nombre y Apellidos</string>
+    <string name="datos_de_cuenta">Datos de cuenta</string>
+    <string name="datos_sanitarios">Datos sanitarios</string>
+    <string name="cambiar_e_mail">Cambiar e-mail</string>
+    <string name="passss">***************</string>
+    <string name="pillup">PILLUP</string>
+    <string name="nombre_de_usuario">Nombre de usuario</string>
+    <string name="contraseña">********</string>
+    <string name="entrar">Entrar</string>
+    <string name="registrar">Registrar</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="add_event">ADD CALENDAR EVENT</string>
+    <string name="sun">SUN</string>
+    <string name="mon">MON</string>
+    <string name="tue">TUE</string>
+    <string name="wed">WED</string>
+    <string name="thu">THU</string>
+    <string name="fri">FRI</string>
+    <string name="sat">SAT</string>
+    <string name="a_adir_pastillas">Añadir pastillas</string>
+    <string name="nombre_de_la_pastilla">NOMBRE DE LA PASTILLA</string>
+    <string name="a_adir_medicamento">Añadir medicamento</string>
+    <string name="durada">DURADA</string>
+    <string name="frecuencia">FRECUENCIA</string>
+    <string name="a_adir_hora_de_la_toma">AÑADIR HORA DE LA TOMA</string>
+    <string name="existencias">EXISTENCIAS</string>
+    <string name="guardar">Guardar</string>
+    <string name="duraci_n">DURACIÓN</string>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/signup_layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.upf.pillup.HOME_ICONS.Add_Pills"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/a_adir_medicamento"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="@color/fondo" />
+
+    <EditText
+        android:id="@+id/PillName"
+        style="@style/pill"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:hint="@string/nombre_de_la_pastilla"
+        android:back
+        android:inputType="text"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
+
+    <Button
+        android:id="@+id/Duration"
+        style="@style/pill"
+        android:gravity="center"
+        android:hint="@string/duraci_n"
+        android:background="@color/profile2"
+        android:textColorHint="#ffffff" />
+
+    <Button
+        android:id="@+id/Frequency"
+        style="@style/pill"
+        android:gravity="center"
+        android:hint="@string/frecuencia"
+        android:background="@color/profile"
+        android:textColorHint="#ffffff" />
+    <Button
+        android:id="@+id/AddTime"
+        style="@style/pill"
+        android:gravity="center"
+        android:hint="@string/a_adir_hora_de_la_toma"
+        android:background="@color/profile2"
+        android:textColorHint="#ffffff" />
+
+    <Button
+        android:id="@+id/Number"
+        style="@style/pill"
+        android:background="@color/profile"
+        android:gravity="center"
+        android:hint="@string/existencias"
+        android:textColorHint="#ffffff" />
+
+    <Button
+        android:id="@+id/Save"
+        style="@style/button_style"
+        android:layout_margin="80dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/guardar"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/Number" />
+
+</LinearLayout>
