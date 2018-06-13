@@ -23,5 +23,9 @@
         <activity android:name=".HOME_ICONS.Profile" />
         <activity android:name=".HOME_ICONS.Buy" />
         <activity android:name=".HOME_ICONS.Add_Pills" />
+        <activity android:name=".HOME_ICONS.Call"    />
     </application>
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
 </manifest>
