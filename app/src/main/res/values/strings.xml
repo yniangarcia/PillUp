@@ -29,4 +29,8 @@
     <string name="existencias">EXISTENCIAS</string>
     <string name="guardar">Guardar</string>
     <string name="duraci_n">DURACIÓN</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="fecha_de_nacimiento">Fecha de nacimiento</string>
+    <string name="cambiar_contrase_a">Cambiar contraseña</string>
 </resources>

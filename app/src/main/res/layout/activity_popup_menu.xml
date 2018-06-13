@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rl_custom_layout"
+        android:layout_width="328dp"
+        android:layout_height="450dp"
+        android:background="#ccffffff"
+        android:padding="2dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="61dp">
+
+
+        <ImageButton
+            android:id="@+id/ib_close"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:src="@drawable/close_image" />
+
+        <EditText
+            android:id="@+id/selectedDateField"
+            android:layout_height="80dp"
+            android:layout_marginTop="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:enabled="false"
+            android:textColor="@color/black"
+            />
+        <EditText
+            android:id="@+id/descriptionField"
+            android:layout_height="80dp"
+            android:layout_marginTop="160dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:hint="      Descripción"
+            />
+
+        <EditText
+            android:id="@+id/timeSelector"
+            android:layout_height="80dp"
+            android:layout_marginTop="240dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:hint="      00:00:00"
+            />
+
+        <Button
+            android:id="@+id/saveAppointment"
+            style="@style/button_style"
+            android:layout_width="260dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="Guardar cita"
+            android:textColor="#ffffff" />
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
