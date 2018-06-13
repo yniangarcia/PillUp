@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/signup_layout_id"
+    android:id="@+id/addpill_layout_id"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="edu.upf.pillup.HOME_ICONS.Add_Pills"
@@ -33,35 +33,48 @@
         android:textColor="#ffffff"
         android:textColorHint="#ffffff" />
 
-    <Button
-        android:id="@+id/Duration"
+    <EditText
+        android:id="@+id/Duracion"
         style="@style/pill"
+        android:layout_marginTop="0dp"
         android:gravity="center"
         android:hint="@string/duraci_n"
-        android:background="@color/profile2"
+        android:inputType="text"
+        android:background="@color/profile"
+        android:textColor="#ffffff"
         android:textColorHint="#ffffff" />
 
-    <Button
+    <EditText
         android:id="@+id/Frequency"
         style="@style/pill"
+        android:layout_marginTop="0dp"
         android:gravity="center"
         android:hint="@string/frecuencia"
+        android:inputType="text"
         android:background="@color/profile"
-        android:textColorHint="#ffffff" />
-    <Button
-        android:id="@+id/AddTime"
-        style="@style/pill"
-        android:gravity="center"
-        android:hint="@string/a_adir_hora_de_la_toma"
-        android:background="@color/profile2"
+        android:textColor="#ffffff"
         android:textColorHint="#ffffff" />
 
-    <Button
+    <EditText
+        android:id="@+id/AddTime"
+        style="@style/pill"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:hint="@string/a_adir_hora_de_la_toma"
+        android:inputType="text"
+        android:background="@color/profile"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
+
+    <EditText
         android:id="@+id/Number"
         style="@style/pill"
-        android:background="@color/profile"
+        android:layout_marginTop="0dp"
         android:gravity="center"
         android:hint="@string/existencias"
+        android:inputType="text"
+        android:background="@color/profile"
+        android:textColor="#ffffff"
         android:textColorHint="#ffffff" />
 
     <Button

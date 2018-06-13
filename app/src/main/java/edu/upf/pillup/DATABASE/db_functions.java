@@ -14,7 +14,7 @@ import edu.upf.pillup.DATABASE.modelUser;
 
 public class db_functions extends SQLiteOpenHelper{
 
-    private static final int DB_version = 2;
+    private static final int DB_version = 3;
     private static final String DB_name = "PillUp.db";
 
     private static final String table_user = "users";
@@ -27,7 +27,10 @@ public class db_functions extends SQLiteOpenHelper{
     private static final String table_pills = "pills";
     private static final String column_pills_id = "pills_id";
     private static final String column_pills_name = "pills_name";
-    private static final String column_pills_quant = "pills_quant";
+    private static final String column_pills_freq = "pills_freq";
+    private static final String column_pills_dur = "pills_dur";
+    private static final String column_pills_time = "pills_time";
+
 
     private String create_user_query = "create table "+ table_user + " ( "+column_user_id
             +" integer primary key autoincrement,"+column_user_name+" text,"+column_user_surname+" text,"
@@ -36,7 +39,8 @@ public class db_functions extends SQLiteOpenHelper{
     private String drop_user_table_query = "drop table if exists "+ table_user;
 
     private String create_pill_query = "create table "+ table_pills + " ( "+column_pills_id
-            +" integer primary key autoincrement,"+column_pills_name+" text,"+column_pills_quant+" text)";
+            +" integer primary key autoincrement,"+column_pills_name+" text,"+column_pills_dur+" text,"
+            +column_pills_time+" text,"+column_pills_freq+" text)";
 
     private String drop_pills_table_query = "drop table if exists "+ table_pills;
 
@@ -48,6 +52,7 @@ public class db_functions extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(create_user_query);
+        System.out.println("------------------- in in in in in");
         db.execSQL(create_pill_query);
     }
 
@@ -74,7 +79,9 @@ public class db_functions extends SQLiteOpenHelper{
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(column_pills_name, pill.getName());
-        values.put(column_pills_quant, pill.getQuant());
+        values.put(column_pills_dur, pill.getDur());
+        values.put(column_pills_time, pill.getTime());
+        values.put(column_pills_freq, pill.getFreq());
 
         db.insert(table_pills, null, values);
         db.close();
@@ -133,7 +140,9 @@ public class db_functions extends SQLiteOpenHelper{
         String[] columns = {
                 column_pills_id,
                 column_pills_name,
-                column_pills_quant
+                column_pills_dur,
+                column_pills_time,
+                column_pills_freq
         };
         // sorting orders
         String sortOrder =
@@ -157,7 +166,9 @@ public class db_functions extends SQLiteOpenHelper{
                 modelPills pill = new modelPills();
                 pill.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(column_pills_id))));
                 pill.setName(cursor.getString(cursor.getColumnIndex(column_pills_name)));
-                pill.setQuant(cursor.getString(cursor.getColumnIndex(column_pills_quant)));
+                pill.setTime(cursor.getString(cursor.getColumnIndex(column_pills_time)));
+                pill.setDur(cursor.getString(cursor.getColumnIndex(column_pills_dur)));
+                pill.setFreq(cursor.getString(cursor.getColumnIndex(column_pills_freq)));
                 // Adding user record to list
                 pillsList.add(pill);
             } while (cursor.moveToNext());
@@ -167,5 +178,11 @@ public class db_functions extends SQLiteOpenHelper{
 
         // return user list
         return pillsList;
+    }
+
+    public Cursor getListPills(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor data = db.rawQuery("SELECT "+column_pills_name+ " FROM " + table_pills, null);
+        return data;
     }
 }
