@@ -2,9 +2,11 @@ package edu.upf.pillup.HOME_ICONS;
 
 import android.content.Intent;
 
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -40,17 +42,31 @@ public class Add_Pills extends AppCompatActivity {
                 String enter_dur = pill_dur.getText().toString();
                 String enter_time = pill_time.getText().toString();
 
-                System.out.println(enter_name+enter_freq+enter_time+enter_dur);
+                SQLiteDatabase db = db_function.getWritableDatabase();
 
-                pill.setName(enter_name.trim());
-                pill.setFreq(enter_freq.trim());
-                pill.setTime(enter_dur.trim());
-                pill.setDur(enter_time.trim());
-                System.out.println(pill);
-                db_function.addPill(pill);
-                Intent intentLoadNewActivity = new Intent(Add_Pills.this, Pills.class);
-                startActivity(intentLoadNewActivity);
+                Cursor row1 = db.rawQuery("select pills_name from pills where pills_name='" + enter_name + "'", null);
+                String dbpill = "";
+                if (row1.moveToFirst()) {
+                    dbpill = row1.getString(0);
+                }
+                if (enter_name.equals(dbpill)) {
+                    showSnackbar(findViewById(R.id.addpill_layout_id), "La pastilla ya existe", Snackbar.LENGTH_LONG);
+                } else if (enter_name.isEmpty() || enter_freq.isEmpty() || enter_dur.isEmpty() || enter_time.isEmpty()){
+                    showSnackbar(findViewById(R.id.addpill_layout_id), "Porfavor, rellena todos los campos", Snackbar.LENGTH_LONG);
+                }else {
+
+                    pill.setName(enter_name.trim());
+                    pill.setFreq(enter_freq.trim());
+                    pill.setTime(enter_dur.trim());
+                    pill.setDur(enter_time.trim());
+                    db_function.addPill(pill);
+                    Intent intentLoadNewActivity = new Intent(Add_Pills.this, Pills.class);
+                    startActivity(intentLoadNewActivity);
+                }
             }
     });
+    }
+    public void showSnackbar(View view, String message, int duration){
+        Snackbar.make(view, message, duration).show();
     }
 }

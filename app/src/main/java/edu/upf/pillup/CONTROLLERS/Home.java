@@ -61,7 +61,7 @@ public class Home extends AppCompatActivity {
         androidImageButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(Home.this, Add_Pills.class);
+                Intent intentLoadNewActivity = new Intent(Home.this, Pills.class);
                 startActivity(intentLoadNewActivity);
             }
         });
