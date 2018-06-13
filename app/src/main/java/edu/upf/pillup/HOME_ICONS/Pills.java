@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import edu.upf.pillup.CONTROLLERS.Home;
-import edu.upf.pillup.CONTROLLERS.Login;
 import edu.upf.pillup.R;
 
 public class Pills extends AppCompatActivity {
